@@ -1,11 +1,13 @@
-<div class="container w-50 d-flex flex-column align-items-center mt-3">
-  <h1 class="text-center"><%= @article.title %>
-  <%= link_to edit_article_path(@article) do %>
-    <i class="fa-solid fa-pen-nib"></i>
+<div class="container w-50 d-flex flex-column align-items-start mt-3">
+  <div class = "w-100 d-flex align-items-center justify-content-start border-bottom border-info mb-3">
+  <h1 class="text-start"><%= @article.title %>
+  </h1>
+  <%= link_to edit_article_path(@article), class:'m-3' do %>
+    <i class="fa-solid fa-pen-nib fa-xl"></i>
   <% end %>
   <%= link_to article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete #{@article.title}?" } do %>
-    <i class="fa-solid fa-trash-can"></i>
+    <i class="fa-solid fa-trash-can fa-xl"></i>
   <% end %>
-  </h1>
-  <p> <%= @article.content %></p>
+  </div>
+  <p class="text-start"> <%= @article.content %></p>
 </div>

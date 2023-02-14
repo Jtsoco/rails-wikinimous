@@ -1,8 +1,11 @@
 <div class="container d-flex flex-column align-items-center mt-3">
   <h1>Articles!</h1>
+  <div class="container w-50 d-flex flex-column text-center mt-3">
   <% @articles.each do |article| %>
-    <%= link_to article.title, article_path(article) %>
+    <h2><%= link_to article.title, article_path(article), class:"text-decoration-none" %></h2>
+    <p><%= article.content.split(/[\!\.\?\;\-]/)[0] %>...</p>
     <% end %>
+  </div>
 
 
 
