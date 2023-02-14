@@ -1,8 +1,8 @@
-  <%= form_with model: @article do |a|%>
+  <%= form_with model: @article, class:'w-50' do |a|%>
   <%= a.label :title %>
   <%= a.text_field :title, class: 'form-control mb-3' %>
   <%= a.label :content %>
-  <%= a.text_area :content, class: 'form-control' %>
+  <%= a.text_area :content, class: 'form-control mb-3', rows:10 %>
   <%= a.submit %>
 
   <% end %>

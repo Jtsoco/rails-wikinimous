@@ -1,4 +1,8 @@
 <div class="container w-50 d-flex flex-column align-items-center mt-3">
-  <h1 class="text-center"><%= @article.title %></h1>
+  <h1 class="text-center"><%= @article.title %>
+  <%= link_to edit_article_path(@article) do %>
+    <i class="fa-solid fa-pen-nib"></i>
+  <% end %>
+  </h1>
   <p> <%= @article.content %></p>
 </div>
